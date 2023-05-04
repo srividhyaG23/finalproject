@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body{
+         background-image: url('https://storage.googleapis.com/bucket-dietary/static/rec.jpg');
+         width:100%; 
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center center;
+         height: 100vh;
+         padding-top:200px;
+         text-align: center;  
+      }
+      form {
+          width: 400px;
+          margin: 0 auto;
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color:aquamarine
+      }
+      
+      label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+      }
+      
+      input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+          box-sizing: border-box;
+      }
+      
+      input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      
+      input[type="submit"]:hover {
+          background-color: #3e8e41;
+      }
+  </style>
+</head>
+<body>
+    <form action ="/recipes">
+      <label for="ingredient">Find recipes for your ingredient:</label><br>
+      <input type="text" id="ingredient" name="ingredient"><br>
+      <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

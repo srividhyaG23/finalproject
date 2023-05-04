@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}customer{% endblock %}
+         {% block head %} 
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/css/all.min.css')}}">
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <style>
+    body
+          {
+          background-image:url('https://storage.googleapis.com/bucket-dietary/static/user2.jpg')
+          }
+/* .container{
+   
+    text-align: right;
+    padding-left: 100px;
+    width: 80%;
+    height: 200px;
+} */
+.container h2 {
+    color: red;
+    font-size: 40px;
+    /* other styles */
+}
+.container h3 {
+    color: black;
+    font-size: 40px;
+    /* other styles */
+}
+
+.button-container1 {
+            text-align: right;
+        }
+        a.button {
+            display: inline-block;
+            margin-right: 20px;
+            padding: 10px 20px ;
+            background-color:darkcyan;
+            color: rgb(14, 13, 13);
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        </style>
+      {% endblock %}    
+   {% block body%}
+   <!-- <h2 style="color:black;"class="page-header text-primary text-center">Customer Page</h2>
+            <h3 class="text-success">Welcome : {{session["name"]}}</h3><br> -->
+     <div class="container">
+        <div class="col-md-offset-3 col-md-5">
+             <h2 class="page-header text-primary text-center">Customer Page</h2>
+            <h3 class="text-success">Welcome : {{session["name"]}}</h3><br>
+                
+        </div> 
+    </div>
+            <div class="container1">
+                <div class="button-container">
+            <a href="{{url_for('bmi')}}" " class="button">Calculate Your BMI</a>
+            <a href="{{url_for('logout')}}" class="button">Logout</a>
+            <a href="{{url_for('calorie')}}" class="button">"Don't guess, count your calories."</a><br>
+    
+
+            </div>
+            <!-- <a href="{{url_for('logout')}}" class="btn btn-primary btn-block">Logout</a>
+    
+            <a href="{{url_for('bmi')}}" style="color:whitesmoke;" class="btn btn-primary btn-block">bmi</a>
+            
+            <a href="{{url_for('calorie')}}" class="btn btn-primary btn-block">calorie counter</a><br>
+            <hr> -->
+            <h1><i>"Discover the foods that fuel you so you can feel your best every day."</i></h1>
+         
+
+{% endblock %}  

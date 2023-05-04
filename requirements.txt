@@ -1,0 +1,10 @@
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+python-decouple
+Werkzeug
+numpy
+requests
+sqlite3

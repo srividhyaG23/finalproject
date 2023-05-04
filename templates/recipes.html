@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe finder</title>
+    <style>
+        body{
+            background-color:peachpuff;
+            
+        }
+/* .btn-block {
+  text-align: left;
+} */
+
+        
+a.button {
+    /* display: inline-block; */
+    text-align: left;
+    margin-left: 20px;
+    padding: 10px 20px ;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    float: left 200px;
+   
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <a href='edamam' class="button">Want to know more recipes!!!</a>
+<h1>Recipe results for {{ ingredient }}</h1>
+
+<ul>
+ {% for hit in hits %}
+    <h3>{{ hit.recipe.label }}</h3>
+     {% for ingredient in hit.recipe.ingredients %}
+        <ul>{{ ingredient.text }}</ul>
+    {% endfor %}
+{% endfor %}
+ </ul>
+ 
+  
+ 
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe finder</title>
+    <style>
+        body{
+            background-color:peachpuff;
+        }
+        
+        .button-container {
+            text-align: right;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-right: 20px;
+            padding: 10px 20px ;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href='edamam' class="button">Want to know more recipes!!!</a>
+        <a href='customer' class="button">home</a>
+    </div>
+    <h1>Recipe results for {{ ingredient }}</h1>
+
+    <ul>
+    {% for hit in hits %}
+        <h3>{{ hit.recipe.label }}</h3>
+        {% for ingredient in hit.recipe.ingredients %}
+            <ul>{{ ingredient.text }}</ul>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+</body>
+</html>

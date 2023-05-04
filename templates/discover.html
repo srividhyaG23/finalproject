@@ -1,0 +1,258 @@
+{% block head %}
+<style>
+  *{
+    box-sizing: border-box;
+  
+  }
+  
+  .topnav {
+  
+    background-color:ghostwhite;
+    
+    padding: 15px 5px 15px;
+  }
+  
+  .topnav header{
+    color:rgb(8, 8, 8);
+    font-size: 25px;
+    display: inline; 
+    text-align: center;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+   .topnav a {  
+    color: #191818; 
+    padding-left: 5px; 
+    text-decoration: none;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  } 
+  
+  .button{
+    text-align: center;
+    text-decoration: none;     
+    border-radius: 3px;
+    background-color: #e7e7e7; 
+    color: black;
+    font-size:20px;
+    margin: 0 10px;
+    padding: 15px;
+  }
+   
+    
+  
+  img{
+      border-radius: 30%;
+      margin-top: 40px;
+      width: 50%;
+      padding-left: 30px; 
+  } 
+  @media only screen and (max-width: 768px) {
+  }  
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .image {
+    flex: 1;
+    padding-left: 30px;
+    
+  
+  }
+  
+  .image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width:600px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+  .wrapper3 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .text3 {
+    flex: 1;
+    text-align: center;
+    padding-left: 600px;
+  }
+  
+  .image3 {
+    flex: 1;
+    text-align: center;
+    padding-right: 700px;
+    margin-top: -200px;
+  }
+  
+  .image3 img {
+    
+    max-width: 100%;
+    width:600px;
+  }
+  .wrapper4 {
+     display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 60px; 
+  
+  }
+  
+  .text4 {
+    flex: 1;
+    text-align: center;
+    padding-left: 600px;
+  }
+  
+  .image4 {
+    max-width: 100%;
+  width: 600px;
+  margin-right: auto;
+  margin-left: -10;
+  margin-top: -300px;
+ 
+  }
+  
+  .image4 img {
+    
+    max-width: 100%;
+    width:600px;
+  }
+  /* .wrapper4 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .text4 {
+    flex: 1;
+    text-align: center;
+    padding-left: 600px;
+  }
+  
+  .image4 {
+    flex: 1;
+    text-align: left;
+    margin-right: 0px;
+    padding-bottom: 60px;
+    margin-top: -200px;
+  }
+  
+  .image4 img {
+    
+    max-width: 100%;
+    width:600px;
+    float: right;
+  }
+  #img4{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-top: -50px;
+    display: block;
+  } */
+  /* .wrapper4 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.text4 {
+  flex: 1;
+  text-align: center;
+  padding-left: 600px;
+}
+
+.image4 {
+  flex: 1;
+  text-align: left;
+  margin-right: 0px;
+  padding-bottom: 60px;
+  margin-top: -200px;
+}
+
+.image4 img {
+  max-width: 100%;
+  width:600px;
+  float: right;
+} */
+
+
+
+  
+  
+           
+       </style>  
+      <nav class="topnav">
+        <header class="head">Know what's on your plate, every time</header>
+        <a href="{{url_for('inde')}}"  class="button">Log in</a>
+        <a href="{{url_for('register')}}"  class="button">Sign up</a>
+      </nav>
+  
+<!--       
+       <div class="container">
+        <h1 style="text-align: center;color:red;text-shadow: 2px 2px 4px rgba(0,0,0,0.4)">Dietary Assistant</h1>
+        <h2 style="text-align: center;font-family: cursive;color:olivedrab;  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);">"Get the facts on your food in seconds"</h2>
+        <p style="text-align: center;color:purple;font-family:'Lucida Sans';">Capture the essence of your meal with a quick photo and instantly unlock a wealth<br> of nutritional information using our food recognition web app.</p>
+      
+      </div>
+  
+   <img src="https://storage.googleapis.com/bucket-dietary/static/Food-Image-Detector.jpg"> -->
+   <div class="wrapper4">
+    <div class="text4">
+      <h2 style="text-align: center;color:firebrick;font-size:40px;text-shadow: 2px 2px 4px rgba(0,0,0,0.4)">Dietary Assistant</h2>
+      <p style="text-align: center;color:darkolivegreen;font-size:30px;">Capture the essence of your meal with a quick photo and instantly unlock a wealth of nutritional information using our food recognition web app.</p>
+    </div>
+    <div class="image4">
+      <img id="img4" src= "https://storage.googleapis.com/bucket-dietary/static/Food-Image-Detector.jpg" alt="Image Description" style="float: right;">
+    </div>
+    </div>
+   <div class="wrapper">
+    <div class="text">
+      <h2 style="text-align: center;color:firebrick;font-size:40px;text-shadow: 2px 2px 4px rgba(0,0,0,0.4)">NutriFinder</h2>
+      <p style="text-align: center;color:darkolivegreen;font-size:30px;">"Make every bite count - our nutrient calculator web app helps you choose nutrient-rich foods that nourish your body and satisfy your taste buds!"</p>
+    </div>
+    <div class="image">
+      <img src="https://storage.googleapis.com/bucket-dietary/static/nutrition.jpeg" alt="Image Description" style="float: left;">
+    </div>
+    
+  </div>
+  <div class="wrapper3">
+    <div class="text3">
+      <h2 style="text-align: center;color:firebrick;font-size:40px;text-shadow: 2px 2px 4px rgba(0,0,0,0.4)">SafePlate</h2>
+      <p style="text-align: center;color:darkolivegreen;font-size:30px;">""Allergies? No problem. Our app recommends safe, delicious foods and recipes""</p>
+    </div>
+    <div class="image3">
+      <img src="https://storage.googleapis.com/bucket-dietary/static/allergies.jpg" alt="Image Description" style="float: right;">
+    </div>
+    </div>
+  
+
+ 
+
+  </body> 
+  
+  
+      {% endblock %}  
